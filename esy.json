@@ -5,7 +5,7 @@
   "source": "git+https://gn.googlesource.com/gn.git#master",
   "override": {
     "build": [
-      "python build/gen.py --out-path=#{self.target_dir}",
+      "python build/gen.py --out-path=#{self.target_dir} --no-last-commit-position",
       "ninja -C #{self.target_dir}"
     ],
     "install": ["cp #{self.target_dir}/gn #{self.bin}"],
