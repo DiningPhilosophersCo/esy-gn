@@ -1,0 +1,8 @@
+{
+  "esy": {
+    "build": "which gn"
+  },
+  "dependencies": {
+    "esy-gn": "*"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "esy-gn",
+  "version": "0.1.0",
+  "description": "Google GN packaged for esy",
+  "source": "git+https://gn.googlesource.com/gn.git#master",
+  "override": {
+    "build": [
+      "python build/gen.py --out-path=#{self.target_dir}",
+      "ninja -C #{self.target_dir}"
+    ],
+    "install": ["cp #{self.target_dir}/gn #{self.bin}"],
+    "dependencies": {}
+  }
+}
